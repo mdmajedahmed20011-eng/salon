@@ -57,7 +57,7 @@ if (process.env.RESEND_API_KEY && process.env.EMAIL_FROM && process.env.DATABASE
 }
 
 const authConfig = {
-  adapter: process.env.DATABASE_URL ? PrismaAdapter(prisma) : undefined,
+  adapter: prisma ? PrismaAdapter(prisma) : undefined,
   pages: {
     signIn: "/auth/login",
     verifyRequest: "/auth/verify-email",
