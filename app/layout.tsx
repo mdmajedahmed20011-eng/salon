@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"),
   title: "LuxeSalon - Premium Hair, Spa and Beauty Salon | Book Online",
   description:
     "Experience world-class hair, facial, spa, and makeup services at LuxeSalon. Book your appointment online in 60 seconds.",
