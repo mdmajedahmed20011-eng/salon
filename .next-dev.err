@@ -1,0 +1,27 @@
+ ⨯ ./app/globals.css:123:5
+Syntax error: C:\Users\Majed\Downloads\2\app\globals.css The `bg-gold-400/70` class does not exist. If `bg-gold-400/70` is a custom class, make sure it is defined within a `@layer` directive.
+
+ [90m 121 | [39m
+ [90m 122 | [39m  [33m.section-label[39m[33m:[39m[33m:[39mbefore [33m{[39m
+[1m[31m>[39m[22m[90m 123 | [39m    [36m@apply[39m h-px w-10 bg-gold-400/70[33m;[39m
+ [90m     | [39m    [1m[31m^[39m[22m
+ [90m 124 | [39m    content[33m:[39m [32m""[39m[33m;[39m
+ [90m 125 | [39m  [33m}[39m
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|C:\Users\Majed\Downloads\2\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!C:\Users\Majed\Downloads\2\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!C:\Users\Majed\Downloads\2\app\globals.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+ ⨯ ./app/globals.css:123:5
+Syntax error: C:\Users\Majed\Downloads\2\app\globals.css The `bg-gold-400/70` class does not exist. If `bg-gold-400/70` is a custom class, make sure it is defined within a `@layer` directive.
+
+ [90m 121 | [39m
+ [90m 122 | [39m  [33m.section-label[39m[33m:[39m[33m:[39mbefore [33m{[39m
+[1m[31m>[39m[22m[90m 123 | [39m    [36m@apply[39m h-px w-10 bg-gold-400/70[33m;[39m
+ [90m     | [39m    [1m[31m^[39m[22m
+ [90m 124 | [39m    content[33m:[39m [32m""[39m[33m;[39m
+ [90m 125 | [39m  [33m}[39m
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1610992231273-1e2aa26b0f49?auto=format&fit=crop&w=900&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1583001809807-8e2fb4f93af2?auto=format&fit=crop&w=900&q=80 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1583001809807-8e2fb4f93af2?auto=format&fit=crop&w=900&q=80 404
+[31m[auth][error][0m MissingSecret: Please define a `secret`. Read more at https://errors.authjs.dev#missingsecret
+    at assertConfig (webpack-internal:///(middleware)/./node_modules/next-auth/node_modules/@auth/core/lib/utils/assert.js:66:16)
+    at Auth (webpack-internal:///(middleware)/./node_modules/next-auth/node_modules/@auth/core/index.js:91:95)
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (128kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
