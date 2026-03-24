@@ -76,8 +76,8 @@ const authConfig = {
     },
     async session({ session, token }) {
       if (session.user) {
-        session.user.role = token.role;
-        session.user.id = token.sub;
+        session.user.role = token.role as string;
+        session.user.id = token.sub as string;
       }
 
       return session;
