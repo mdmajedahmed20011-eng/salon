@@ -32,17 +32,6 @@
   --color-info: #3b82f6;
 }
 
-[data-theme="light"] {
-  --color-bg-primary: #faf9f7;
-  --color-bg-secondary: #f0ede8;
-  --color-bg-tertiary: #e8e3dc;
-  --color-bg-glass: rgba(255, 255, 255, 0.7);
-  --color-text-primary: #1a1209;
-  --color-text-secondary: #5c4f3d;
-  --color-text-muted: #8b7d69;
-  --color-border: rgba(0, 0, 0, 0.08);
-}
-
 @layer base {
   * {
     @apply border-border;

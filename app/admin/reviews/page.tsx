@@ -1,9 +1,15 @@
+import { AdminPageHeader } from "@/components/admin/AdminPageHeader";
+
 export default function AdminReviewsPage() {
   return (
-    <div className="premium-card p-8">
-      <p className="section-label">Reviews</p>
-      <h1 className="text-5xl">Moderation and replies</h1>
-      <div className="mt-8 space-y-4">
+    <div className="space-y-8">
+      <AdminPageHeader
+        badges={["2 replies pending", "4.9 average public rating", "Image uploads enabled"]}
+        description="Stay close to guest feedback, protect the brand voice, and close review loops with thoughtful replies."
+        label="Reviews"
+        title="Moderation and replies"
+      />
+      <div className="space-y-4">
         {[
           "5.0 • Nadia Karim • Signature Precision Cut",
           "4.8 • Tania Reza • Bridal Preview Session",
@@ -11,9 +17,14 @@ export default function AdminReviewsPage() {
         ].map((review) => (
           <div
             key={review}
-            className="rounded-[24px] border border-white/10 bg-white/[0.03] p-5 text-sm text-text-secondary"
+            className="premium-card p-5 text-sm text-text-secondary"
           >
-            {review}
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <span>{review}</span>
+              <span className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-[11px] uppercase tracking-[0.14em]">
+                Reply suggested
+              </span>
+            </div>
           </div>
         ))}
       </div>

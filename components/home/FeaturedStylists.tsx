@@ -34,7 +34,7 @@ export function FeaturedStylists() {
           label="Meet the artists"
           title="Our Master Stylists"
         />
-        <div className="flex gap-3">
+        <div className="hidden gap-3 sm:flex">
           <Button aria-label="Previous stylists" onClick={() => scrollByDirection("prev")} variant="icon">
             <ArrowLeft className="h-4 w-4" />
           </Button>
@@ -43,11 +43,11 @@ export function FeaturedStylists() {
           </Button>
         </div>
       </div>
-      <div className="mt-12 flex gap-6 overflow-x-auto pb-2 scrollbar-none" ref={scrollerRef}>
+      <div className="mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 scrollbar-none sm:gap-6" ref={scrollerRef}>
         {stylists.map((stylist, index) => (
           <motion.article
             key={stylist.id}
-            className="group premium-card min-w-[280px] max-w-[280px]"
+            className="group premium-card min-w-[82vw] max-w-[82vw] snap-start sm:min-w-[280px] sm:max-w-[280px]"
             initial={{ opacity: 0, y: 40 }}
             transition={{ delay: index * 0.08, duration: 0.6 }}
             viewport={{ once: true }}

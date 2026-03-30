@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
@@ -42,11 +41,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html data-theme="dark" lang="en">
       <body>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        {children}
         <script
           dangerouslySetInnerHTML={{ __html: JSON.stringify(salonJsonLd) }}
           type="application/ld+json"

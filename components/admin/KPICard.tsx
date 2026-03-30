@@ -23,6 +23,13 @@ export function KPICard({ metric }: { metric: AdminMetric }) {
           {metric.delta}
         </div>
       </div>
+      <div className="mt-5 h-1.5 overflow-hidden rounded-full bg-white/5">
+        <div
+          className={`h-full rounded-full ${
+            metric.trend === "up" ? "w-[74%] bg-gold-400" : "w-[42%] bg-rose-400"
+          }`}
+        />
+      </div>
     </div>
   );
 }

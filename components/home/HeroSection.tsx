@@ -16,7 +16,7 @@ const stats = [
 
 export function HeroSection() {
   return (
-    <section className="relative isolate flex min-h-[calc(100vh-80px)] items-end overflow-hidden">
+    <section className="relative isolate flex min-h-[calc(100svh-80px)] items-end overflow-hidden">
       <Image
         alt="Luxury salon interior"
         blurDataURL={buildBlurDataURL("111111")}
@@ -29,7 +29,7 @@ export function HeroSection() {
       />
       <div className="absolute inset-0 bg-hero-overlay" />
       <div className="absolute inset-0 luxury-grid opacity-30" />
-      <div className="container-shell relative z-10 flex w-full flex-col justify-center py-16 md:py-20">
+      <div className="container-shell relative z-10 flex w-full flex-col justify-center py-14 md:py-20">
         <div className="max-w-4xl">
           <motion.p {...heroMotion(0)} className="section-label">
             Award-winning salon and spa
@@ -54,18 +54,18 @@ export function HeroSection() {
         </div>
         <motion.div
           {...heroMotion(0.6)}
-          className="glass-panel mt-16 grid gap-4 px-6 py-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-10"
+          className="glass-panel mt-14 grid grid-cols-2 gap-3 px-4 py-4 sm:mt-16 sm:gap-4 sm:px-6 sm:py-6 lg:grid-cols-4 lg:px-10"
         >
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className="relative text-center lg:text-left"
+              className="relative rounded-[22px] border border-white/5 bg-black/15 p-4 text-center sm:p-5 lg:border-0 lg:bg-transparent lg:p-0 lg:text-left"
             >
               {index > 0 ? (
                 <div className="absolute left-0 top-1/2 hidden h-10 w-px -translate-y-1/2 bg-gold-400/20 lg:block" />
               ) : null}
-              <div className="text-3xl font-semibold text-gold-300">{stat.value}</div>
-              <div className="mt-2 text-sm uppercase tracking-[0.18em] text-text-secondary">
+              <div className="text-2xl font-semibold text-gold-300 sm:text-3xl">{stat.value}</div>
+              <div className="mt-2 text-[11px] uppercase tracking-[0.18em] text-text-secondary sm:text-sm">
                 {stat.label}
               </div>
             </div>

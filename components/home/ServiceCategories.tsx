@@ -26,20 +26,21 @@ export function ServiceCategories() {
         label="Our expertise"
         title="Indulge in Every Luxury"
       />
-      <div className="mt-12 grid gap-4 overflow-x-auto pb-2 scrollbar-none sm:grid-cols-2 lg:grid-cols-6">
+      <div className="mt-12 grid auto-cols-[82vw] grid-flow-col gap-4 overflow-x-auto pb-2 pr-4 snap-x snap-mandatory scrollbar-none sm:auto-cols-auto sm:grid-flow-row sm:grid-cols-2 sm:pr-0 lg:grid-cols-6">
         {serviceCategories.map((category, index) => {
           const Icon = iconMap[category.icon as keyof typeof iconMap] ?? Sparkles;
 
           return (
             <motion.div
               key={category.id}
+              className="snap-start"
               initial={{ opacity: 0, y: 40 }}
               transition={{ delay: index * 0.08, duration: 0.6 }}
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
             >
               <Link
-                className="group premium-card block h-[280px] min-w-[220px] overflow-hidden border-white/5"
+                className="group premium-card block h-[280px] min-w-0 overflow-hidden border-white/5"
                 href={`/services/${category.slug}`}
               >
                 <div className="relative h-full">

@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-import { ThemeToggle } from "@/components/shared/ThemeToggle";
-
 const quickLinks = [
   { href: "/book", label: "Book appointment" },
   { href: "/services", label: "Services" },
@@ -87,7 +85,6 @@ export function Footer() {
       <div className="border-t border-white/5">
         <div className="container-shell flex flex-col gap-4 py-5 text-sm text-text-secondary md:flex-row md:items-center md:justify-between">
           <p>Copyright 2026 LuxeSalon. All rights reserved.</p>
-          <ThemeToggle />
         </div>
       </div>
     </footer>
